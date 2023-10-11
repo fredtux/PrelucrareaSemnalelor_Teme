@@ -34,7 +34,7 @@ pdf.append(fig)
 fig, axs = plt.subplots(3)
 fig.suptitle("c)")
 
-t = np.arange(0, 0.03, 0.03 * 1.0/200)
+t = np.arange(0, 0.03, 1.0/200)
 
 resx = x(t)
 axs[0].plot(t, resx)
