@@ -1,6 +1,5 @@
 import matplotlib.pyplot as plt
 import numpy as np
-from matplotlib.backends.backend_pdf import PdfPages
 from scipy.io import wavfile
 import sounddevice as sd
 
@@ -15,7 +14,7 @@ wavfile.write('p03.a.wav', rate, a)
 sd.wait()
 r,x = wavfile.read('p03.a.wav')
 print("Play a")
-# sd.play(x, fs)
+sd.play(x, fs)
 sd.wait()
 
 
@@ -29,7 +28,7 @@ sd.wait()
 
 r,x = wavfile.read('p03.b.wav')
 print("Play b")
-# sd.play(x, fs)
+sd.play(x, fs)
 sd.wait()
 
 
@@ -50,7 +49,7 @@ sd.wait()
 
 
 # d)
-dfreq = 300
+dfreq = 50
 dsampling = 2*fs
 dmax = 2
 dmin = 0
@@ -70,5 +69,5 @@ sd.wait()
 
 r,x = wavfile.read('p03.d.wav')
 print("Play d")
-# sd.play(x, fs)
+sd.play(x, fs)
 sd.wait()
