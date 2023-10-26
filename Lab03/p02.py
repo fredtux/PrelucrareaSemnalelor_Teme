@@ -11,7 +11,7 @@ def colorize_graphic(y):
 
         h = 0 # Red
         s = 255 # Full saturation
-        v = 255 - int(distance * 180 / N) # Luminosity
+        v = 255 - int(distance / N) # Luminosity
         hsv = np.uint8([[[h, s, v]]])
         rgb = cv2.cvtColor(hsv, cv2.COLOR_HSV2RGB)
         hex_red = hex(rgb[0][0][0])[2:] if len(hex(rgb[0][0][0])[2:]) == 2 else f"0{hex(rgb[0][0][0])[2:]}"
