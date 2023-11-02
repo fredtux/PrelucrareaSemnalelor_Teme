@@ -1,0 +1,1 @@
+# Aproximativ, pot distinge tot mai putin "I"
