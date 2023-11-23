@@ -1,5 +1,4 @@
 import numpy as np
-import matplotlib.pyplot as plt
 
 N = 5
 
@@ -17,9 +16,9 @@ for i in range(len(p)):
 print(f"Inmultirea: {mul}")
 
 # Convolutia cu fft
-pfft = np.fft.fft(p)
-qfft = np.fft.fft(q)
+pfft = np.fft.fft(p, 2*N - 1)
+qfft = np.fft.fft(q, 2*N - 1)
 
-fft_conv = (np.fft.ifft(np.convolve(pfft,qfft)))
+fft_conv = np.real(np.fft.ifft(pfft * qfft))
 print(f"Convolutie FFT: {fft_conv}")
 
